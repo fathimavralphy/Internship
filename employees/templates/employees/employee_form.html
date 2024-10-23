@@ -1,0 +1,8 @@
+<!-- templates/employees/employee_form.html -->
+<h1>Add New Employee</h1>
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Save</button>
+</form>
+<a href="{% url 'employee_list' %}">Back to List</a>

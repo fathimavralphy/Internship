@@ -1,0 +1,8 @@
+<!-- templates/employees/employee_update.html -->
+<h1>Update Employee: {{ employee.first_name }} {{ employee.last_name }}</h1>
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Save Changes</button>
+</form>
+<a href="{% url 'employee_list' %}">Back to List</a>

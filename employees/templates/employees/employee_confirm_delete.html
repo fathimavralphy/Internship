@@ -1,0 +1,7 @@
+<!-- templates/employees/employee_confirm_delete.html -->
+<h1>Are you sure you want to delete {{ employee.first_name }} {{ employee.last_name }}?</h1>
+<form method="POST">
+    {% csrf_token %}
+    <button type="submit">Yes, Delete</button>
+</form>
+<a href="{% url 'employee_list' %}">Cancel</a>

@@ -1,0 +1,12 @@
+<!-- templates/employees/employee_list.html -->
+<h1>Employee List</h1>
+<a href="{% url 'employee_create' %}">Add New Employee</a>
+<ul>
+    {% for employee in employees %}
+        <li>
+            {{ employee.first_name }} {{ employee.last_name }} - {{ employee.position }}
+            <a href="{% url 'employee_update' employee.pk %}">Edit</a> |
+            <a href="{% url 'employee_delete' employee.pk %}">Delete</a>
+        </li>
+    {% endfor %}
+</ul>
