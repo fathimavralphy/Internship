@@ -1,0 +1,13 @@
+<html>
+    <head>
+        <title>signin page</title>
+    </head>
+    <body>
+        <center><h2>SIGN_IN PAGE</h2>
+        <form method ="POST">
+            {% csrf_token %}
+            {{form.as_p}}
+            <br><button type="submit">submit</button>    
+        </form></center>
+    </body>
+</html>

@@ -1,0 +1,15 @@
+<html>
+    <head>
+        <title>Index page</title>
+    </head>
+    <body>
+        <h1><center><b><u>Employee Management System</b></u></h1>
+            <form method ="POST">
+                {% csrf_token %}
+                {{form.as_p}}
+            <center><a href="{% url 'register' %}">Sign-In</a><br>
+
+        <a href="{% url 'login' %}">Login</a></center>
+            </center>
+    </body>
+</html>

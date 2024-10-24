@@ -16,9 +16,9 @@ Including another URLconf
 """
 # employee_register/urls.py
 from django.contrib import admin
-from django.urls import path, include
+from django.urls import path, include  # include allows us to link to app-level URLs
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include('employees.urls')),  # Include employee URLs
+    path('admin/', admin.site.urls),  # Admin URL
+    path('', include('employees.urls')),  # Route root path to employees app
 ]

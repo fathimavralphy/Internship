@@ -1,0 +1,12 @@
+<html>
+    <head>
+        <title>home page</title>
+    </head>
+    <body>
+        <h1><center><b>WELCOME TO, {{ user.username }}</b></h1></center>
+        <center><a href="{% url 'employee_list' %}">Add Employee</a><br>
+
+        <a href="{% url 'logout' %}">LOG_OUT</a></center>
+
+    </body>
+</html>
